@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://blockhouse.tscn" type="PackedScene" id=1]
+[ext_resource path="res://soldier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemys_mgr.gd" type="Script" id=4]
+[ext_resource path="res://Camera2D_follow_house.gd" type="Script" id=5]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="soldier" parent="." instance=ExtResource( 2 )]
+position = Vector2( 562, 303 )
+
+[node name="soldier2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 290 )
+
+[node name="soldier3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 446, 247 )
+
+[node name="soldier7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 486, 244 )
+
+[node name="soldier4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 537, 264 )
+
+[node name="soldier5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 417, 344 )
+
+[node name="soldier6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 530, 354 )
+
+[node name="blockhouse" parent="." instance=ExtResource( 1 )]
+position = Vector2( 487, 296 )
+
+[node name="Camera2D_follow_house" type="Camera2D" parent="blockhouse"]
+current = true
+script = ExtResource( 5 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 223, 417 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 851, 219 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 193, 245 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 520, 122 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 711, 397 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Enemys_mgr" type="Node2D" parent="."]
+script = ExtResource( 4 )
